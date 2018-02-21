@@ -55,12 +55,16 @@
             opacity: 0.0;
             width: 700px;
             padding: 0 0 0 11%;
-            border: 10px ridge rgb(255, 5, 0);
+            border: 10px ridge rgb(245, 5, 0);
             margin: auto;
             margin-top: 40px;
+            animation-name: flicker;
+            animation-duration: .05s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
 
         }
-        #div:hover{background-color: rgb(87, 84, 83);
+        #div{background-color: rgb(86, 64, 23);
             opacity: 1.0;
             width: 700px;
             padding: 0 0 0 11%;
@@ -69,6 +73,11 @@
 
         }
 
+        @keyframes flicker {
+            from {background-color: rgba(87, 84, 83, 0.5);}
+            to {background-color: rgb(86, 64, 23);}
+
+        }
     </style>
 
 
@@ -76,6 +85,7 @@
 
     <div class="topnav">
         <a class="active" href="#home">AsianDJ</a>
+        <a class="Mak" href="https://makpehar.github.io/">Mak's Site</a>
     </div>
 
 
