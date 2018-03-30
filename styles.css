@@ -1,0 +1,126 @@
+.topnav {
+    background-color: #333;
+    overflow: auto;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 37px;
+
+}
+
+.topnav a:hover {
+    color: red;
+
+}
+
+.topnav a:active {
+    background-color: #000000;
+    color: white;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+
+}
+
+.dropdown .dropbtn {
+    font-size: 37px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(249, 249, 249, .5);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 24px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+body{background-color: white;
+    background-image: url("http://wallpul.info/i/2016/12/wallpapers-black-wallpaper-4k-simple-black-4k-abstract-wallpapers-free-4k-wallpaper-1080p-hd-wallpapers.jpg");
+;
+}
+
+.Hawaii{color: rgb(0, 0, 0);
+}
+
+#img{text-align: center;
+    filter: grayscale(100%)
+}
+
+img{border: 5px ridge rgb(255, 5, 0);
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(fonts/leaguegothic/leaguegothic-webfont.eot);
+}
+
+
+#div{background-color: rgba(87, 84, 83, 0.5);
+    opacity: 0.0;
+    width: 700px;
+    padding: 0 0 0 11%;
+    border: 10px ridge rgb(245, 5, 0);
+    margin: auto;
+    margin-top: 40px;
+    animation-name: flicker;
+    animation-duration: .05s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    font-family: myFirstFont;
+    filter: grayscale(100%)
+
+}
+#div{background-color: rgb(86, 64, 23);
+    opacity: 1.0;
+    width: 700px;
+    padding: 0 0 0 11%;
+    margin: auto;
+    margin-top: 40px;
+
+}
+
+@keyframes flicker {
+    from {background-color: rgba(87, 84, 83, 0.5);}
+    to {background-color: rgb(86, 64, 23);}
+
+}
+
+.Hman {
+    color: white;
+    text-align: center;
+}
+
+.lol {
+    color: white;
+    text-align: center;
+}
+
