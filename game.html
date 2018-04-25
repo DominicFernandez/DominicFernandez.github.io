@@ -56,7 +56,7 @@
         var guessStatus = document.getElementById("guess_status");
 
         // Initialize game state variables
-        var secretWord = "killme";
+        var secretWord = "FreddyFreaker";
         var guessedWord = [];
         var guessedLetters = [];
         for (var i = 0; i < secretWord.length; i++) {
@@ -105,7 +105,7 @@
                 guessStatus.innerHTML = "Ugh, really? Try a different letter";
             }
             if (hasWon()) {
-                guessStatus.innerHTML = "I can't believe you actually managed to solve it.";
+                guessStatus.innerHTML = "I can't believe you actually managed to solve it. Now do it.";
             }
             displayGuessedWord();
             guessInput.value = "";
@@ -113,6 +113,106 @@
         displayGuessedWord();
 
     </script>
+</div>
+
+<br><br><br>
+
+<div class="MadLibs">
+
+    <h1>Mad Libs</h1>
+
+    <form id="lib-form" align="center">
+        <label>
+            Name: <input type="text" id="name">
+        </label>
+        <label>
+            Verb: <input type="text" id="verb">
+        </label>
+        <label>
+            Adjective: <input type="text" id="adjective">
+        </label>
+        <label>
+            Noun: <input type="text" id="noun">
+        </label>
+        <br>
+        <br>
+        <button type="submit">Generate!</button>
+    </form>
+
+    <div id="story"></div>
+    <div id="demo"></div>
+
+    <p>This is the story:</p>
+
+    <script src="https://www.google.com/jsapi"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="index.js"></script>
+    <div class="story"></div>
+
+</div>
+
+<div class="quiz">
+
+
+    <h3>Exciting Quiz Time!</h3>
+
+    <form id="quiz-form">
+
+        <fieldset>
+            <legend>What language is this programmed in?</legend>
+            <label><input name="question1" value="javascript" type="radio">JavaScript</label><br>
+            <label><input name="question1" value="python" type="radio">Python</label><br>
+            <label><input name="question1" value="java" type="radio">Java</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>What is life?</legend>
+            <label><input name="question2" value="The absence of death" type="radio">The absence of death</label><br>
+            <label><input name="question2" value="42" type="radio">42</label><br>
+            <label><input name="question2" value="HTTP" type="radio">HTTP</label><br>
+        </fieldset>
+
+        <button type="submit">Check me</button>
+
+    </form>
+
+    <div id="results"></div>
+
+
+        <script>
+            var quizForm = document.getElementById("quiz-form");
+            quizForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                // resultsDiv is the div to display the results in
+                var resultsDiv = document.getElementById("results");
+
+                var answer1 = document.querySelector('[name="question1"]:checked');
+
+                var answer2 = document.querySelector('[name="question2"]:checked');
+
+                var score = 0;
+
+                if (!answer1 && !answer2) {
+                    resultsDiv.innerHTML = "You didn't check anything! :(";
+
+                } else {
+
+                    if (answer1.value === "javascript") {
+                        score += 1;
+                    }
+
+                    if (answer2.value === "42") {
+                        score += 1;
+                    }
+                    resultsDiv.innerHTML = 'Your Score: '+score+'/2';
+                }
+
+            });
+
+
+        </script>
+
 </div>
 
 </body>
